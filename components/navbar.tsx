@@ -8,10 +8,10 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 const navigation = [
-  { name: 'Home', href: '#' },
-  { name: 'Categories', href: '#categories' },
-  { name: 'Popular Tools', href: '#tools' },
-  { name: 'About', href: '#about' },
+  { name: 'Home', href: '/' },
+  { name: 'Categories', href: '/#categories' },
+  { name: 'Popular Tools', href: '/#tools' },
+  { name: 'Browse All', href: '/tools' },
 ];
 
 export function Navbar() {
@@ -75,11 +75,13 @@ export function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-3">
-            <Button
-              className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-300 rounded-xl px-5"
-            >
-              Browse Tools
-            </Button>
+            <Link href="/tools">
+              <Button
+                className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-300 rounded-xl px-5"
+              >
+                Browse Tools
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
